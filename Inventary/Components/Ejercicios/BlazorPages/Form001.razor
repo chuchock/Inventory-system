@@ -1,0 +1,30 @@
+﻿<h3>Form001</h3>
+
+<input type="text" @bind-value="@message" />
+
+<input type="text" @bind-value="@text" />
+
+<input type="button" value="Haga clic aquí" @onclick="ChangeText" />
+
+<div>
+	@message
+</div>
+
+@code {
+
+	[Parameter]
+	public string Message { get; set; } // parameter must be public
+
+	string message = "Un contenido";
+	string text = "";
+
+	protected override async Task OnInitializedAsync()
+	{
+		message = Message;
+	}
+
+	private void ChangeText()
+	{
+		message = text;
+	}
+}
