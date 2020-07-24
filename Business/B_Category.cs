@@ -20,7 +20,7 @@ namespace Business
 			}
 		}
 
-		public void CreateCategory(CategoryEntity oCategory)
+		public static void CreateCategory(CategoryEntity oCategory)
 		{
 			using (var db = new InventaryContext())
 			{
@@ -29,7 +29,7 @@ namespace Business
 			}
 		}
 
-		public void UpdateCategory(CategoryEntity oCategory)
+		public static void UpdateCategory(CategoryEntity oCategory)
 		{
 			using (var db = new InventaryContext())
 			{
